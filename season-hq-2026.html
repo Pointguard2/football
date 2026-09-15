@@ -41,6 +41,44 @@ input[type=search],input[type=text],select{width:100%;background:var(--panel);bo
 .mc{padding:6px 4px;min-height:44px}.mc.r{text-align:right}.mv{font:700 17px var(--disp);line-height:1.1}.mn{font-size:13px;line-height:1.2;margin-top:2px}
 .mslot{font:700 10px var(--mono);text-align:center;padding:4px 0;border-radius:6px;color:#0A0D11;margin:0 4px}
 details.pl>summary{list-style:none;cursor:pointer}details.pl>summary::-webkit-details-marker{display:none}details.pl .plbody{margin:2px 0 8px 10px;padding-left:8px;border-left:2px solid var(--line)}
+</style><style>
+/* ---- 2026-09-15 shared refresh: additive only, never removes a rule above.
+   Keeps each app's own accent; adds reserved status colours, a consistent
+   type scale, roomier cards and 44px tap targets. Status colour is never the
+   only signal — .res always carries a word. ---- */
+:root{--accent:var(--lime);--won:#3DDC84;--lost:#FF4F5E;--push:#FFB020;--open:#8A97A3;--r:14px;--pad:14px}
+body{line-height:1.35}
+main{padding:0 16px}
+h2{margin:26px 0 10px}h2:first-child{margin-top:18px}
+.card{border-radius:var(--r);padding:var(--pad);margin-bottom:10px}
+.row{gap:10px;padding:10px 2px}
+.sub{font-size:12px;margin-top:3px;line-height:1.4}
+.note{font-size:12.5px;line-height:1.5;margin:10px 0 0}
+.pos{color:var(--won)}.neg{color:var(--lost)}
+.tab{min-height:44px}
+.btn{min-height:44px;padding:10px 14px;color:var(--chalk)}
+.btn.on{background:var(--accent);color:#0A0D11;border-color:var(--accent);font-weight:700}
+input[type=search],input[type=text],select{min-height:44px;padding:12px}
+.grid{gap:7px 12px}.grid>div{min-height:22px;display:flex;align-items:center}
+.k{font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+.seg{gap:8px;margin:8px 0 12px}
+/* hero number */
+.stat{font:700 30px/1 var(--disp);letter-spacing:.01em}
+.statlab{font:12px var(--body);color:var(--muted);margin-top:5px}
+.statrow{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.statrow>div:last-child{text-align:right}
+/* result pill — word first, colour second */
+.res{display:inline-flex;align-items:center;gap:5px;font:700 11px var(--disp);letter-spacing:.07em;text-transform:uppercase;padding:4px 9px;border-radius:999px;border:1px solid;white-space:nowrap}
+.res.won{color:var(--won);border-color:rgba(61,220,132,.45);background:rgba(61,220,132,.1)}
+.res.lost{color:var(--lost);border-color:rgba(255,79,94,.45);background:rgba(255,79,94,.1)}
+.res.push{color:var(--push);border-color:rgba(255,176,32,.45);background:rgba(255,176,32,.1)}
+.res.open{color:var(--open);border-color:var(--line);background:var(--panel2)}
+.tag{display:inline-block;font:700 10px var(--disp);letter-spacing:.09em;text-transform:uppercase;padding:3px 7px;border-radius:5px;border:1px solid var(--line);color:var(--muted);background:var(--panel2);white-space:nowrap}
+.tag.real{color:var(--accent);border-color:currentColor}
+.bet{display:flex;gap:10px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}.bet:last-child{border-bottom:0}
+.bet .who{flex:1;min-width:0}.bet .pick{font-size:15px;font-weight:600;line-height:1.35}
+.bet .rt{flex:0 0 auto;text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:5px}
+.bet .amt{font:700 15px var(--mono)}
 </style></head><body>
 <header><h1>Season <i>HQ</i><small>CHRISTOPHER'S COOL TEAM · TOUCH DOWN THERE</small></h1><div class="ver" id="ver"></div></header>
 <main>
